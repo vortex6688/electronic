@@ -1,0 +1,119 @@
+@import 'variables';
+@import 'reset';
+@import 'base';
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  padding: 1em 0;
+  flex-wrap: wrap;
+
+  .title {
+    padding: 0 1em;
+    font-weight: 400;
+  }
+
+  a {
+    padding: 0.125em 0.75em 0;
+    text-decoration: none;
+    color: #466977;
+  }
+
+  .header-left {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 50%;
+  }
+
+  .header-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .description {
+    padding: 2.5em 0 1em;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.select {
+  display: flex;
+
+  .select-col {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    position: relative;
+
+    &.left {
+      background: url('/img/mobile.jpg');
+      background-size: auto 100%;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-color: #b2c2c9;
+    }
+
+    &.right {
+      background: url('/img/laptops.jpg');
+      background-size: auto 100%;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-color: #466977;
+    }
+
+    .select-hover {
+      z-index: 100;
+      opacity: 0;
+      display: none;
+      text-align: center;
+      margin-top: 36%;
+      color: #273047;
+      font-size: 2.5em;
+      padding: 1em 0;
+      background: rgba(255,255,255,0.75)
+    }
+
+    &:hover {
+      cursor: pointer;
+      .select-hover {
+        opacity: 1;
+        display: block;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,0.5);
+      }
+    }
+  }
+
+  .select-title {
+    text-align: center;
+    font-weight: 400;
+    padding: 0.5em 0;
+    background: rgba(255,255,255,0.5);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 0.5em 0;
+}

@@ -1,0 +1,37 @@
+html {
+  font-size: $html-font-size-lg;
+  line-height: 23px;
+  
+  @media (max-width: 1024px) {
+      font-size: $html-font-size-md;
+  }
+  
+  @media (max-width: 640px) {
+      font-size: $html-font-size-sm;
+  }
+  
+  @media (max-width: 480px) {
+      font-size: $html-font-size-xs;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Slabo 27px', serif;
+  font-weight: 400;
+}
+
+p, a {
+  font-size: $paragraph-font-size-lg;
+  
+  @media (max-width: 1024px) {
+      font-size: $paragraph-font-size-md;
+  }
+  
+  @media (max-width: 640px) {
+      font-size: $paragraph-font-size-sm;
+  }
+  
+  @media (max-width: 480px) {
+      font-size: $paragraph-font-size-xs;
+  }
+}
