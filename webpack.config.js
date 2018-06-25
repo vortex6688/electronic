@@ -16,6 +16,14 @@ module.exports = {
             filename: 'index.html',
             template: './src/index.html'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'mobile/index.html',
+            template: './src/mobile/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'computer/index.html',
+            template: './src/computer/index.html'
+        }),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
@@ -36,7 +44,7 @@ module.exports = {
                 test: /\.scss$/,
                 use: [
                   MiniCssExtractPlugin.loader,
-                  "css-loader",
+                  "css-loader?url=false",
                   "sass-loader"
                 ]
             }

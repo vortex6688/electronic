@@ -73,15 +73,17 @@ header {
     display: flex;
     flex-direction: column;
     width: 50%;
-    position: relative; }
+    position: relative;
+    border-left: 2px #fff solid;
+    border-right: 2px #fff solid; }
     .select .select-col.left {
-      background: url("/img/mobile.jpg");
+      background: url("./img/mobile.jpg");
       background-size: auto 100%;
       background-position: top center;
       background-repeat: no-repeat;
       background-color: #b2c2c9; }
     .select .select-col.right {
-      background: url("/img/laptops.jpg");
+      background: url("./img/laptops.jpg");
       background-size: auto 100%;
       background-position: top center;
       background-repeat: no-repeat;
