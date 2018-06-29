@@ -1,6 +1,7 @@
 html {
   font-size: $html-font-size-lg;
   line-height: 23px;
+  font-family: 'Libre Franklin', sans-serif;
   
   @media (max-width: 1024px) {
       font-size: $html-font-size-md;
@@ -16,8 +17,37 @@ html {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Slabo 27px', serif;
   font-weight: 400;
+}
+
+h1 {
+    font-size: $html-font-size-lg * 3.6;
+    padding: 0.25em;
+}
+
+h2 {
+    font-size: $html-font-size-lg * 3.2;
+    padding: 0.25em;
+}
+
+h3 {
+    font-size: $html-font-size-lg * 2.8;
+    padding: 0.25em;
+}
+
+h4 {
+    font-size: $html-font-size-lg * 2.2;
+    padding: 0.25em;
+}
+
+h5 {
+    font-size: $html-font-size-lg * 1.6;
+    padding: 0.25em;
+}
+
+h6 {
+    font-size: $html-font-size-lg;
+    padding: 0.25em;
 }
 
 p, a {

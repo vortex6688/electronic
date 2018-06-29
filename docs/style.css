@@ -4,7 +4,8 @@
 
 html {
   font-size: 16px;
-  line-height: 23px; }
+  line-height: 23px;
+  font-family: 'Libre Franklin', sans-serif; }
   @media (max-width: 1024px) {
     html {
       font-size: 15px; } }
@@ -16,8 +17,31 @@ html {
       font-size: 13px; } }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Slabo 27px', serif;
   font-weight: 400; }
+
+h1 {
+  font-size: 57.6px;
+  padding: 0.25em; }
+
+h2 {
+  font-size: 51.2px;
+  padding: 0.25em; }
+
+h3 {
+  font-size: 44.8px;
+  padding: 0.25em; }
+
+h4 {
+  font-size: 35.2px;
+  padding: 0.25em; }
+
+h5 {
+  font-size: 25.6px;
+  padding: 0.25em; }
+
+h6 {
+  font-size: 16px;
+  padding: 0.25em; }
 
 p, a {
   font-size: 18px; }
@@ -31,6 +55,12 @@ p, a {
     p, a {
       font-size: 12px; } }
 
+@font-face {
+  font-family: 'lotregular';
+  src: url("fonts/lot-webfont.woff2") format("woff2"), url("fonts/lot-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 html {
   height: 100%; }
 
@@ -41,79 +71,95 @@ body {
 
 header {
   display: flex;
-  padding: 1em 0;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding: 1.5em; }
+  header .logo {
+    max-width: 8em; }
   header .title {
-    padding: 0 1em;
-    font-weight: 400; }
+    display: none; }
   header a {
-    padding: 0.125em 0.75em 0;
+    padding: 0 0.25em;
     text-decoration: none;
     color: #466977; }
-  header .header-left {
+  header nav {
+    padding-left: 2.5em; }
+  header .header-nav {
     display: flex;
-    justify-content: center;
-    align-items: baseline;
+    justify-content: start;
+    align-items: flex-end;
     width: 50%; }
-  header .header-right {
+  header .widgets {
     width: 50%;
     display: flex;
-    justify-content: center;
-    align-items: baseline; }
-  header .description {
-    padding: 2.5em 0 1em;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    text-align: center; }
+    justify-content: flex-end;
+    align-items: flex-end; }
+  header .widget-icon {
+    max-width: 2em;
+    padding: 0 0.5em; }
 
 .select {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3em; }
   .select .select-col {
     display: flex;
     flex-direction: column;
     width: 50%;
     position: relative;
-    border-left: 2px #fff solid;
-    border-right: 2px #fff solid; }
+    justify-content: center; }
     .select .select-col.left {
-      background: url("./img/mobile.jpg");
+      background: url("./img/men.jpg");
       background-size: auto 100%;
       background-position: top center;
       background-repeat: no-repeat;
-      background-color: #b2c2c9; }
+      background-color: #FFF; }
+      .select .select-col.left .select-title {
+        color: #fff;
+        background: #000;
+        padding: 0.5em 2em;
+        font-family: 'lotregular';
+        letter-spacing: 0.15em; }
+      .select .select-col.left:hover {
+        cursor: pointer; }
+        .select .select-col.left:hover .select-title {
+          color: #0c7996;
+          background: #dfbdbb; }
     .select .select-col.right {
-      background: url("./img/laptops.jpg");
+      background: url("./img/women.jpg");
       background-size: auto 100%;
       background-position: top center;
       background-repeat: no-repeat;
-      background-color: #466977; }
-    .select .select-col .select-hover {
-      z-index: 100;
-      opacity: 0;
-      display: none;
-      text-align: center;
-      margin-top: 36%;
-      color: #273047;
-      font-size: 2.5em;
-      padding: 1em 0;
-      background: rgba(255, 255, 255, 0.75); }
-    .select .select-col:hover {
-      cursor: pointer; }
-      .select .select-col:hover .select-hover {
-        opacity: 1;
-        display: block; }
-      .select .select-col:hover:after {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.5); }
-  .select .select-title {
-    text-align: center;
-    font-weight: 400;
-    padding: 0.5em 0;
-    background: rgba(255, 255, 255, 0.5); }
+      background-color: #fff; }
+      .select .select-col.right .select-title {
+        color: #000;
+        background: #fff;
+        padding: 0.5em 2em;
+        font-family: 'lotregular'; }
+      .select .select-col.right:hover {
+        cursor: pointer; }
+        .select .select-col.right:hover .select-title {
+          color: #0c7996;
+          background: #a1d5c8; }
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #000;
+  color: #dfbdbb;
+  height: 10em;
+  width: 90%;
+  margin: -2em auto 0;
+  text-align: center;
+  z-index: 100; }
+
+.sale-select {
+  display: flex;
+  text-align: center;
+  padding: 1em 0; }
+  .sale-select .left,
+  .sale-select .right {
+    width: 50%; }
 
 footer {
   text-align: center;
